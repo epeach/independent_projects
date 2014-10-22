@@ -4,32 +4,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 	/**
-	 * <b>Graph</b> represents a graph which can store String nodes and
-	 *	the String edges between them. Does not contain duplicates of nodes.
+	 * <b>Graph</b> represents a graph which can store nodes and
+	 *	the edges between them. Does not contain duplicates of nodes.
 	*   Can add nodes and edges to the graph and query the contents of the
 	*   graph as a whole or the children of individual nodes.
 	*   The data type T represents the data type of the nodes in the graph.
 	*   The data type E represents the data type of the edges in the graph.
-	*
-	*   @specfield graph = collection of nodes that store the nodes to which
-	*   they are connected and the edges that connect them
 	*/
 
 	//TODO: Fix graph to make it simple (no multi-edges)
 	public class Graph<T, E>{
 
-        /*
-         * Representation Invariant: graph != null and does not contain duplicate
-         * nodes where the values of two nodes in the graph are never equal.
-         *
-         * Abstract Function: AF(r) == Graph h where h.graph contains a key
-         * representing each node in r.
-         * Each key maps to an Edge that maps the value of the nodes to
-         * which the node of value key connects to the values of the
-         * connections between the nodes.
-         */
-
-        private Map<T, Edge> graph;
+		private Map<T, Edge> graph;
 
         /**
          * @modifies graph
@@ -125,26 +111,9 @@ import java.util.NoSuchElementException;
 
         /** <b>Edge</b> represents an edge which maps the name of nodes to the
          *  strings that arrive at them from other nodes. Does not contain
-         *  duplicates of nodes. Can add edges to the graph and query the
-         *  nodes associated with this edge and the edges associated between
-         *  the current node and a given node in the edge.
-         *
-         *  @specfield edges = collection of type T that maps the
-         *  value of nodes to which they are connecte and the 
-         *  edges that connect them
+         *  duplicates of nodes.
          */
         private class Edge{
-
-           /*
-            * Representation Invariant: edges != null and does not contain
-            * duplicate nodes where the values of two nodes in the
-            * graph are never equal.
-            *
-            * Abstract Function: AF(r) == Edge h where h.edges contains a key
-            * representing each nodes at which an edge arrives.
-            * Each key maps to a list of type T representing the edges
-            * that arrive at the key node from one node in particular.
-            */
 
         	Map<T, List<E>> edges;
         	/**
