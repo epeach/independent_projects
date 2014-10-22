@@ -1,0 +1,12 @@
+Todo List
+
+1. Fix graph from multi-edge to simple
+2. Build a bipartite graph builder (double checks bipartite)
+3. Frame basic main
+	*Can build random bipartite graphs
+4. Visual interface (simple, java swing fine for now)
+5. Find solutions to longest connection
+6. Interactivity --> Design in JustinMind WireFraming?
+7. Design scoring system
+8. Web -isize it!
+9. Mobile -isize it!
