@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Set;
 
 public class BipartiteMaker {
@@ -19,7 +20,11 @@ public class BipartiteMaker {
 		
 		//Makes connections from one part to other
 		//TODO: MAKE CONNECTIONS! :)
+		int max = groupB.size();
+		Random rand = new Random();
+		int connectNum;
 		for(Node node : groupA){
+			connectNum = rand.nextInt(max) + 1;
 			
 		}
 		
